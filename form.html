@@ -1,0 +1,54 @@
+ <div>
+<header class="toolbar toolbar-header">
+  <h3>Registration-Form</h3>
+    </header>
+</div>
+
+<div class="register">
+  <form name="form" novalidate> 
+ 
+<!-- ItemName-->
+<div class="form-group" >
+
+          <span class="icon icon-user"></span>&nbsp;itemname
+            <input type="text" name="item_name" id="item_name" class="form-control" ng-model="customer.itemname"   required/>
+    <span ng-show="form.$dirty && form.itemname.$error.required">This is a required field</span>
+    <span ng-show="form.$dirty && form.itemname.$invalid">This field is invalid </span>
+</div>
+
+<!-- model -->
+<div class="form-group">
+          <span class="icon icon-user"></span>&nbsp;model
+        <input type="text" name="model" id="model" class="form-control" ng-model="customer.model" required/>
+            <span ng-show="form.$dirty && form.model.$error.required">This is a required field</span>
+            <span ng-show="form.$dirty && form.model.$invalid">This field is invalid </span>
+        </div>
+
+
+ <!--batchnumber-->
+ <div class="form-group">
+    <span class="icon icon-mail"></span>&nbsp;batchnumber
+    <div class="col-xs-9">
+     <input type="number" class="form-control" id="batchnumber" ng-model="customer.batchnumber" name="batchnumber" class="batchnumber" placeholder="Enter your batchnumber" required/>
+     <span ng-show="form.$dirty && form.batchnumber.$error.required">This is a required field</span>
+    <span ng-show="form.$dirty && form.batchnumber.$invalid">This field is invalid </span><br/><br/>
+  </div>
+  </div>
+  <!--leadsource-->
+ <div class="form-group">
+    <span class="icon icon-key"></span>&nbsp;leadsource
+    <div class="col-xs-9">
+     <input type="text" class="form-control" id="leadsource" ng-model="customer.leadsource" name="leadsource" class="leadsource" placeholder="Enter your leadsource" required/>
+     <span ng-show="form.$dirty && form.leadsource.$error.required">This is a required field</span>
+    <span ng-show="form.$dirty && form.leadsource.$invalid">This field is invalid </span><br/><br/>
+  </div>
+  </div> 
+
+    <div class="form-group">      
+<button ng-click="save(customer)"  class="btn btn-primary" id="btnAdd" ng-disabled="form.$invalid">Add Customer</button>
+   <a href="#login"><button class="btn btn-primary" >Back </button> </a>  
+
+   <input type="reset" class="btn btn-primary"  value="Reset"/>  
+</div>
+</form>
+</div>

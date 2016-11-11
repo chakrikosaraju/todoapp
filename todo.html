@@ -1,0 +1,58 @@
+<div class="window">
+<!-- HEADER -->
+  <header class="toolbar toolbar-header">
+         <div ng-include="'home1.html'"></div>
+
+  </header>
+  <!-- HEADER -->
+
+<!-- sidebar -->
+
+ <div class="window-content">
+    <div class="pane-group">
+      <div class="pane-sm sidebar">
+      <div ng-include="'side.html'"></div>
+      </div>
+      <!-- sidebar -->
+
+<!-- table -->
+      <div class="pane">
+          <table class="tablesorter table table-bordered  table-hover" id="sortable_table" ng-model="customer">
+                         
+                            <thead>
+                            <tr>
+                            <th >itemname</th>
+                            <th >model</th>
+                            <th>batchnumber</th>
+                            <th>leadsource</th>
+                            <th><button ng-click="addcustomer(customer)"  class="btn btn-primary">add</button></th>
+                            </tr>
+                            </thead>
+                        <tbody>
+                           <tr>
+                           <td>{{customer.itemname}}</td>
+                           <td>{{customer.model}}</td>
+                           <td>{{customer.batchnumber}}</td>
+                           <td>{{customer.leadsource}}</td>
+                    <td><button ng-click="editcustomer(customer)"  class="btn btn-primary" ng-disabled="frm.$invalid">EDIT</button></td>
+                            <td><input type="button" value="Remove" class="btn btn-primary" ng-click="remove(id)"/></td>
+
+                   <!-- <td><a href="#editcustomer/{{cus.id}}"  class="delete-person" ng-click="removeRow(company.name) title="delete Customer">Delete</a></td>-->
+                    <!--<a ng-href="#/edit/{{project.$id}}"><i class="icon-pencil"></i></a>-->
+                           </tr>
+                           </tbody>
+                            
+                            </table>
+                            <!-- <a href="#editcustomer/{{cus.id}}" class="update-person" title="Update Customer">Edit</a> -->
+               
+        </div>
+        <!-- table -->
+
+      </div>
+            </div>
+           
+
+</div>
+
+
+
